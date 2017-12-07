@@ -14,7 +14,7 @@ tracks:
       :{release_inc}
     devel_branch: ros2
     name: upstream
-    patches: null
+    patches: ros2
     release_inc: -1
     release_repo_url: git@github.com:ros2-gbp/resource_retriever
     release_tag: ros2

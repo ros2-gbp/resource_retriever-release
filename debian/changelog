@@ -1,0 +1,15 @@
+ros-ardent-libcurl-vendor (2.0.2-0xenial) xenial; urgency=high
+
+  * Added missing dependency on pkg-config (#19 <https://github.com/ros/resource_retriever/issues/19>) (#20 <https://github.com/ros/resource_retriever/issues/20>)
+  * Contributors: William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Thu, 08 Feb 2018 08:00:00 -0000
+
+ros-ardent-libcurl-vendor (2.0.1-0xenial) xenial; urgency=high
+
+  * Converted to ament and added setup env hooks for library paths (#14 <https://github.com/ros/resource_retriever/issues/14>) (#18 <https://github.com/ros/resource_retriever/issues/18>)
+  * Contributors: William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Wed, 07 Feb 2018 08:00:00 -0000
+
+

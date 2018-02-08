@@ -1,1 +1,1 @@
-{"base": "ea9f8b3", "parent": "debian/ardent/libcurl_vendor", "previous": "e9bfab0", "trim": "", "trimbase": ""}
+{"parent": "debian/ardent/libcurl_vendor", "trimbase": "", "previous": "9ffefa3", "base": "9bbe09d", "trim": ""}

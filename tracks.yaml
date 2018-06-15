@@ -15,7 +15,7 @@ tracks:
     devel_branch: ardent
     last_version: 2.0.2
     name: resource_retriever
-    patches: ubuntu
+    patches: ardent
     release_inc: '2'
     release_repo_url: git@github.com:ros2-gbp/resource_retriever-release
     release_tag: :{version}

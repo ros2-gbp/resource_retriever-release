@@ -1,0 +1,110 @@
+ros-bouncy-resource-retriever (2.1.0-0bionic) bionic; urgency=high
+
+  * Make sure to export the include directory for resource_retriever. (#22 <https://github.com/ros/resource_retriever/issues/22>)
+  * Contributors: Chris Lalancette
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 20 Jun 2018 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.12.3-0bionic) bionic; urgency=high
+
+  * Fix C++11 to use set_directory_properties
+  * Make Shane and Chris the maintainers.
+  * Python3 compatibility (#10 <https://github.com/ros/resource_retriever/issues/10>)
+    * Replace urlgrabber with urllib[2]
+    As urlgrabber is not supported for Python 3 replace it with either the built-in urllib (Python 2) or urllib2 (Python 3)
+    * Use rospkg instead of system call for rospack
+    * Add test for python functionality
+    * Fix rospkg dependency definition
+  * Update URL in http test to something which exists (#8 <https://github.com/ros/resource_retriever/issues/8>)
+    * Update URL in http test to something which exists
+  * Contributors: Chris Lalancette, Mike Purvis, Ruben Smits
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 26 Mar 2017 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.12.2-0bionic) bionic; urgency=high
+
+  * fix failing build due to cmake error (#6 <https://github.com/ros/resource_retriever/issues/6>)
+  * Contributors: Jackie Kay
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 09 Jun 2016 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.12.1-0bionic) bionic; urgency=high
+
+  * Fix warnings in test (#5 <https://github.com/ros/resource_retriever/issues/5>)
+    add spaces around ROS_PACKAGE_NAME
+  * Merge pull request #4 <https://github.com/ros/resource_retriever/issues/4> from DLu/kinetic-devel
+    Add c++11 flag
+  * Contributors: David V. Lu!!, Jackie Kay, Steven Peters
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 09 Jun 2016 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.12.0-0bionic) bionic; urgency=high
+
+  * resource_retriever: adding missing dep
+    Using the python resource_retriever requires the python-urlgrabber system dependency: http://rosindex.github.io/d/python-urlgrabber/
+  * Contributors: Jonathan Bohren
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 22 Mar 2016 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.6-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sat, 29 Nov 2014 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.5-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 23 Jul 2014 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.4-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 06 Jul 2014 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.3-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Mon, 23 Jun 2014 22:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.2-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 21 Mar 2014 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.1-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Wed, 19 Mar 2014 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.11.0-0bionic) bionic; urgency=high
+
+
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Thu, 20 Feb 2014 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.10.18-0bionic) bionic; urgency=high
+
+  * add DEPENDS for kdl_parser
+  * Contributors: Ioan Sucan
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Tue, 03 Dec 2013 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.10.16-0bionic) bionic; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Sun, 17 Nov 2013 23:00:00 -0000
+
+ros-bouncy-resource-retriever (1.10.15-0bionic) bionic; urgency=high
+
+  * resource_retriever: install python package using setup.py
+
+ -- Chris Lalancette <clalancette@osrfoundation.org>  Fri, 16 Aug 2013 22:00:00 -0000
+
+

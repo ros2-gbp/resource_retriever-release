@@ -2,11 +2,10 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.0.2 (2018-02-08)
+2.1.0 (2018-06-21)
 ------------------
-
-2.0.1 (2018-02-07)
-------------------
+* Make sure to export the include directory for resource_retriever. (`#22 <https://github.com/ros/resource_retriever/issues/22>`_)
+* Contributors: Chris Lalancette
 
 1.12.3 (2017-03-27)
 -------------------

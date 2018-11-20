@@ -1,0 +1,49 @@
+ros-crystal-libcurl-vendor (2.1.0-0bionic) bionic; urgency=high
+
+  * depend on curl (mapping to curl, libcurl4-openssl-dev) for packaging (#25 <https://github.com/ros/resource_retriever/issues/25>)
+  * add missing dependency on pkg-config (#19 <https://github.com/ros/resource_retriever/issues/19>)
+  * [libcurl_vendor] convert to ament and setup env hooks for library paths (#14 <https://github.com/ros/resource_retriever/issues/14>)
+  * Contributors: Dirk Thomas, Mikael Arguedas, William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Thu, 21 Jun 2018 07:00:00 -0000
+
+ros-crystal-libcurl-vendor (2.0.0-0bionic) bionic; urgency=high
+
+  * disable docs and tests for libcurl to avoid needing perl
+  * fix libcurl vendor package on Windows and warnings
+  * add temporary libcurl_vendor and use it to get curl
+  * Contributors: William Woodall
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 08 Dec 2017 08:00:00 -0000
+
+ros-crystal-libcurl-vendor (1.12.3-0bionic) bionic; urgency=high
+
+
+
+ -- William Woodall <william@osrfoundation.org>  Mon, 27 Mar 2017 07:00:00 -0000
+
+ros-crystal-libcurl-vendor (1.12.2-0bionic) bionic; urgency=high
+
+
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 10 Jun 2016 21:16:00 -0000
+
+ros-crystal-libcurl-vendor (1.12.1-0bionic) bionic; urgency=high
+
+
+
+ -- William Woodall <william@osrfoundation.org>  Fri, 10 Jun 2016 17:28:00 -0000
+
+ros-crystal-libcurl-vendor (1.12.0-0bionic) bionic; urgency=high
+
+
+
+ -- William Woodall <william@osrfoundation.org>  Wed, 23 Mar 2016 07:00:00 -0000
+
+ros-crystal-libcurl-vendor (1.11.6-0bionic) bionic; urgency=high
+
+
+
+ -- William Woodall <william@osrfoundation.org>  Sun, 30 Nov 2014 08:00:00 -0000
+
+

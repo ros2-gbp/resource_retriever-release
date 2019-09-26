@@ -1,3 +1,28 @@
+## resource_retriever (eloquent) - 2.2.0-1
+
+The packages in the `resource_retriever` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --track eloquent --rosdistro eloquent resource_retriever` on `Thu, 26 Sep 2019 19:36:16 -0000`
+
+These packages were released:
+- `libcurl_vendor`
+- `resource_retriever`
+
+Version of package(s) in repository `resource_retriever`:
+
+- upstream repository: https://github.com/ros/resource_retriever.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.13`
+- rosdep version: `0.16.1`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.42`
+
+
 ## resource_retriever (dashing) - 2.1.0-2
 
 The packages in the `resource_retriever` repository were released into the `dashing` distro by running `/usr/local/bin/bloom-release -r dashing -t dashing resource_retriever` on `Thu, 09 May 2019 00:42:33 -0000`

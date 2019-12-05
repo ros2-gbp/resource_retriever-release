@@ -2,6 +2,12 @@
 Changelog for package libcurl_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.2 (2019-12-05)
+------------------
+
+2.1.1 (2019-05-08)
+------------------
+
 2.1.0 (2018-06-21)
 ------------------
 * depend on curl (mapping to curl, libcurl4-openssl-dev) for packaging (`#25 <https://github.com/ros/resource_retriever/issues/25>`_)

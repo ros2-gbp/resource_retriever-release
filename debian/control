@@ -1,0 +1,12 @@
+Source: ros-eloquent-libcurl-vendor
+Section: misc
+Priority: optional
+Maintainer: William Woodall <william@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), curl, libcurl4-openssl-dev, ros-eloquent-ament-cmake, ros-eloquent-ros-workspace
+Homepage: https://github.com/curl/curl
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-libcurl-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, curl, libcurl4-openssl-dev, pkg-config, ros-eloquent-ros-workspace
+Description: Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.

@@ -2,8 +2,10 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.2.0 (2019-09-26)
+2.1.2 (2019-12-05)
 ------------------
+* Catch ament_index_cpp::PackageNotFoundError (`#34 <https://github.com/ros/resource_retriever/issues/34>`_)
+* Contributors: Shane Loretz
 
 2.1.1 (2019-05-08)
 ------------------

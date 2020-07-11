@@ -1,1 +1,1 @@
-{"trim": "", "base": "90d16eb", "trimbase": "", "parent": "debian/dashing/libcurl_vendor", "previous": "7e20007"}
+{"base": "aa9b90c", "parent": "debian/dashing/libcurl_vendor", "previous": "4b9badf", "trim": "", "trimbase": ""}

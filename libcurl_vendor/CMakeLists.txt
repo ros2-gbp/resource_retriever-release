@@ -27,9 +27,9 @@ macro(build_libcurl)
 
   include(ExternalProject)
   if(WIN32)
-    ExternalProject_Add(curl-7.57.0
-      URL https://github.com/curl/curl/releases/download/curl-7_57_0/curl-7.57.0.tar.gz
-      URL_MD5 c7aab73aaf5e883ca1d7518f93649dc2
+    ExternalProject_Add(curl-7.58.0
+      URL https://github.com/curl/curl/releases/download/curl-7_68_0/curl-7.68.0.tar.gz
+      URL_MD5 f68d6f716ff06d357f476ea4ea57a3d6
       LOG_CONFIGURE ${should_log}
       LOG_BUILD ${should_log}
       CMAKE_ARGS
@@ -40,9 +40,9 @@ macro(build_libcurl)
       TIMEOUT 600
     )
   else()
-    ExternalProject_Add(curl-7.57.0
-      URL https://github.com/curl/curl/releases/download/curl-7_57_0/curl-7.57.0.tar.gz
-      URL_MD5 c7aab73aaf5e883ca1d7518f93649dc2
+    ExternalProject_Add(curl-7.58.0
+      URL https://github.com/curl/curl/releases/download/curl-7_68_0/curl-7.68.0.tar.gz
+      URL_MD5 f68d6f716ff06d357f476ea4ea57a3d6
       CONFIGURE_COMMAND
         <SOURCE_DIR>/configure
         CFLAGS=${extra_c_flags}
@@ -73,9 +73,18 @@ if(NOT CURL_FOUND)
 
   if(WIN32)
     ament_environment_hooks(env_hook/libcurl_vendor_library_path.bat)
+    set(ENV_VAR_NAME "PATH")
+    set(ENV_VAR_VALUE "opt\\libcurl_vendor\\bin")
   else()
     ament_environment_hooks(env_hook/libcurl_vendor_library_path.sh)
+    if(APPLE)
+      set(ENV_VAR_NAME "DYLD_LIBRARY_PATH")
+    else()
+      set(ENV_VAR_NAME "LD_LIBRARY_PATH")
+    endif()
+    set(ENV_VAR_VALUE "opt/libcurl_vendor/lib")
   endif()
+  ament_environment_hooks(env_hook/libcurl_vendor_library_path.dsv.in)
   set(CURL_FOUND FALSE)
 endif()
 

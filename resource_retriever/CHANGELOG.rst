@@ -2,13 +2,30 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.1.3 (2020-07-10)
+2.4.0 (2020-08-12)
+------------------
+* Add .hpp header and deprecate .h (`#51 <https://github.com/ros/resource_retriever/issues/51>`_)
+* Add pytest.ini so local tests don't display warning (`#48 <https://github.com/ros/resource_retriever/issues/48>`_)
+* Contributors: Chris Lalancette, Shane Loretz
+
+2.3.2 (2020-06-03)
 ------------------
 
-2.1.2 (2019-12-05)
+2.3.1 (2020-05-08)
 ------------------
-* Catch ament_index_cpp::PackageNotFoundError (`#34 <https://github.com/ros/resource_retriever/issues/34>`_)
+* Import pytest before resource_retriever (`#45 <https://github.com/ros/resource_retriever/issues/45>`_)
+* Use pytest instead of nose (`#44 <https://github.com/ros/resource_retriever/issues/44>`_)
 * Contributors: Shane Loretz
+
+2.3.0 (2020-04-30)
+------------------
+* Towards Quality Level 1 - Added common_linters and fixed tests  (`#43 <https://github.com/ros/resource_retriever/issues/43>`_)
+* use ament_export_targets() (`#41 <https://github.com/ros/resource_retriever/issues/41>`_)
+* Catch ament_index_cpp::PackageNotFoundError (`#32 <https://github.com/ros/resource_retriever/issues/32>`_)
+* Contributors: Alejandro Hernández Cordero, Dirk Thomas, Shane Loretz
+
+2.2.0 (2019-09-26)
+------------------
 
 2.1.1 (2019-05-08)
 ------------------

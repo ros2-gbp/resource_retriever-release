@@ -2,13 +2,29 @@
 Changelog for package libcurl_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.1.3 (2020-07-10)
+2.4.0 (2020-08-12)
 ------------------
-* Ignore broken curl-config.cmake. (`#49 <https://github.com/ros/resource_retriever/issues/49>`_)
-* Contributors: Steven! Ragnarök
+* bump curl version to 7.68 (`#47 <https://github.com/ros/resource_retriever/issues/47>`_)
+* Contributors: Dirk Thomas
 
-2.1.2 (2019-12-05)
+2.3.2 (2020-06-03)
 ------------------
+* export TARGETS in libcurl_vendor (`#46 <https://github.com/ros/resource_retriever/issues/46>`_)
+* Contributors: Dirk Thomas
+
+2.3.1 (2020-05-08)
+------------------
+
+2.3.0 (2020-04-30)
+------------------
+* Ignore broken curl-config.cmake (`#40 <https://github.com/ros/resource_retriever/issues/40>`_)
+* Update curl reference from 7.57 to 7.58 (`#36 <https://github.com/ros/resource_retriever/issues/36>`_)
+* Contributors: Nathan Brooks, Scott K Logan
+
+2.2.0 (2019-09-26)
+------------------
+* add .dsv file beside custom environment hook (`#30 <https://github.com/ros/resource_retriever/issues/30>`_)
+* Contributors: Dirk Thomas
 
 2.1.1 (2019-05-08)
 ------------------

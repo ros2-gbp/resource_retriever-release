@@ -28,7 +28,7 @@
 
 #include <gtest/gtest.h>
 
-#include <resource_retriever/retriever.hpp>
+#include <resource_retriever/retriever.h>
 
 #include <string>
 #include <exception>

@@ -2,15 +2,17 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.3.4 (2020-12-08)
+2.4.1 (2020-12-08)
 ------------------
-* Throw exception if package name is empty (`#54 <https://github.com/ros/resource_retriever/issues/54>`_) (`#55 <https://github.com/ros/resource_retriever/issues/55>`_)
-* Contributors: Jacob Perron
+* Throw exception if package name is empty (`#54 <https://github.com/ros/resource_retriever/issues/54>`_)
+* Update maintainers (`#53 <https://github.com/ros/resource_retriever/issues/53>`_)
+* Contributors: Alejandro Hernández Cordero, Jacob Perron
 
-2.3.3 (2020-08-18)
+2.4.0 (2020-08-12)
 ------------------
-* Add pytest.ini so local tests don't display warning (`#48 <https://github.com/ros/resource_retriever/issues/48>`_) (`#52 <https://github.com/ros/resource_retriever/issues/52>`_)
-* Contributors: Chris Lalancette
+* Add .hpp header and deprecate .h (`#51 <https://github.com/ros/resource_retriever/issues/51>`_)
+* Add pytest.ini so local tests don't display warning (`#48 <https://github.com/ros/resource_retriever/issues/48>`_)
+* Contributors: Chris Lalancette, Shane Loretz
 
 2.3.2 (2020-06-03)
 ------------------

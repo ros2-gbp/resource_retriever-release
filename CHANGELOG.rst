@@ -2,6 +2,9 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.4.2 (2021-03-18)
+------------------
+
 2.4.1 (2020-12-08)
 ------------------
 * Throw exception if package name is empty (`#54 <https://github.com/ros/resource_retriever/issues/54>`_)

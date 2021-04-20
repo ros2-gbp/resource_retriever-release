@@ -1,0 +1,13 @@
+Source: ros-galactic-resource-retriever
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez <alejandro@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest, ros-galactic-ament-cmake-gtest, ros-galactic-ament-cmake-pytest, ros-galactic-ament-cmake-ros, ros-galactic-ament-index-cpp, ros-galactic-ament-index-python, ros-galactic-ament-lint-auto, ros-galactic-ament-lint-common, ros-galactic-libcurl-vendor, ros-galactic-python-cmake-module, ros-galactic-ros-workspace
+Homepage: http://ros.org/wiki/resource_retriever
+Standards-Version: 3.9.2
+
+Package: ros-galactic-resource-retriever
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-ament-index-cpp, ros-galactic-ament-index-python, ros-galactic-libcurl-vendor, ros-galactic-ros-workspace
+Description: This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+ The package:// url for ros packages is translated into a local file:// url. The resourse retriever was initially designed to load mesh files into memory, but it can be used for any type of data. The resource retriever is based on the the libcurl library.

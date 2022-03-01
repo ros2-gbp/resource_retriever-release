@@ -2,6 +2,11 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.0 (2022-03-01)
+------------------
+* Install headers to include/${PROJECT_NAME} (`#72 <https://github.com/ros/resource_retriever/issues/72>`_)
+* Contributors: Shane Loretz
+
 3.0.0 (2022-01-14)
 ------------------
 * Fix include order for cpplint (`#69 <https://github.com/ros/resource_retriever/issues/69>`_)

@@ -1,1 +1,1 @@
-{"base": "87f6834", "parent": "debian/rolling/resource_retriever", "previous": "7279f4f", "trim": "", "trimbase": ""}
+{"base": "0576d94", "parent": "debian/humble/resource_retriever", "previous": "4cd7e53", "trim": "", "trimbase": ""}

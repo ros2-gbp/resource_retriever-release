@@ -1,0 +1,13 @@
+Source: ros-humble-resource-retriever
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-humble-ament-cmake-gtest <!nocheck>, ros-humble-ament-cmake-pytest <!nocheck>, ros-humble-ament-cmake-ros, ros-humble-ament-index-cpp, ros-humble-ament-index-python, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-libcurl-vendor, ros-humble-python-cmake-module <!nocheck>, ros-humble-ros-workspace
+Homepage: http://ros.org/wiki/resource_retriever
+Standards-Version: 3.9.2
+
+Package: ros-humble-resource-retriever
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-ament-index-cpp, ros-humble-ament-index-python, ros-humble-libcurl-vendor, ros-humble-ros-workspace
+Description: This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+ The package:// url for ros packages is translated into a local file:// url. The resourse retriever was initially designed to load mesh files into memory, but it can be used for any type of data. The resource retriever is based on the the libcurl library.

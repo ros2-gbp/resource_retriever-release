@@ -2,19 +2,10 @@
 Changelog for package libcurl_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.2.2 (2022-11-02)
+3.1.1 (2023-01-10)
 ------------------
-* merge libcurl_vendor build instructions (`#81 <https://github.com/ros/resource_retriever/issues/81>`_)
-* Contributors: schrodinbug
-
-3.2.1 (2022-09-13)
-------------------
-* Sets CMP0135 policy behavior to NEW (`#79 <https://github.com/ros/resource_retriever/issues/79>`_)
-* Fixes policy CMP0135 warning for CMake >= 3.24
-* Contributors: Cristóbal Arroyo, Crola1702
-
-3.2.0 (2022-05-10)
-------------------
+* Sets CMP0135 policy behavior to NEW (backport `#79 <https://github.com/ros/resource_retriever/issues/79>`_) (`#82 <https://github.com/ros/resource_retriever/issues/82>`_)
+* Contributors: mergify[bot]
 
 3.1.0 (2022-03-01)
 ------------------

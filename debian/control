@@ -1,0 +1,13 @@
+Source: ros-rolling-resource-retriever
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, ros-rolling-ament-cmake-gtest <!nocheck>, ros-rolling-ament-cmake-pytest <!nocheck>, ros-rolling-ament-cmake-ros, ros-rolling-ament-index-cpp, ros-rolling-ament-index-python, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-libcurl-vendor, ros-rolling-python-cmake-module <!nocheck>, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/resource_retriever
+Standards-Version: 3.9.2
+
+Package: ros-rolling-resource-retriever
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-ament-index-cpp, ros-rolling-ament-index-python, ros-rolling-libcurl-vendor, ros-rolling-ros-workspace
+Description: This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+ The package:// url for ros packages is translated into a local file:// url. The resourse retriever was initially designed to load mesh files into memory, but it can be used for any type of data. The resource retriever is based on the the libcurl library.

@@ -2,6 +2,12 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.4.0 (2023-12-26)
+------------------
+* Switch to target_link_libraries. (`#89 <https://github.com/ros/resource_retriever/issues/89>`_)
+* Update to C++17 (`#88 <https://github.com/ros/resource_retriever/issues/88>`_)
+* Contributors: Chris Lalancette
+
 3.3.1 (2023-07-11)
 ------------------
 

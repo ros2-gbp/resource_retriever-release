@@ -1,0 +1,165 @@
+ros-rolling-libcurl-vendor (3.4.0-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 26 Dec 2023 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.3.1-2noble) noble; urgency=high
+
+  * Switch to ament_cmake_vendor_package (#86 <https://github.com/ros/resource_retriever/issues/86>)
+  * Contributors: Scott K Logan
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 11 Jul 2023 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.3.0-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 28 Apr 2023 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.2.2-2noble) noble; urgency=high
+
+  * merge libcurl_vendor build instructions (#81 <https://github.com/ros/resource_retriever/issues/81>)
+  * Contributors: schrodinbug
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 02 Nov 2022 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.2.1-2noble) noble; urgency=high
+
+  * Sets CMP0135 policy behavior to NEW (#79 <https://github.com/ros/resource_retriever/issues/79>)
+  * Fixes policy CMP0135 warning for CMake >= 3.24
+  * Contributors: Cristóbal Arroyo, Crola1702
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 13 Sep 2022 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.2.0-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 10 May 2022 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.1.0-2noble) noble; urgency=high
+
+  * Update to curl 7.81. (#74 <https://github.com/ros/resource_retriever/issues/74>)
+  * Contributors: Chris Lalancette
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 01 Mar 2022 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (3.0.0-2noble) noble; urgency=high
+
+  * Update maintainers (#66 <https://github.com/ros/resource_retriever/issues/66>)
+  * Contributors: Audrow Nash
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 14 Jan 2022 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.5.0-2noble) noble; urgency=high
+
+  * Update libcurl_vendor to the latest version (7.75.0). (#60 <https://github.com/ros/resource_retriever/issues/60>)
+  * Contributors: Chris Lalancette
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 06 Apr 2021 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.4.2-2noble) noble; urgency=high
+
+  * Add an override flag to force vendored build (#58 <https://github.com/ros/resource_retriever/issues/58>)
+  * Contributors: Scott K Logan
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 18 Mar 2021 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.4.1-2noble) noble; urgency=high
+
+  * Update maintainers (#53 <https://github.com/ros/resource_retriever/issues/53>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 08 Dec 2020 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.4.0-2noble) noble; urgency=high
+
+  * bump curl version to 7.68 (#47 <https://github.com/ros/resource_retriever/issues/47>)
+  * Contributors: Dirk Thomas
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 12 Aug 2020 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.3.2-2noble) noble; urgency=high
+
+  * export TARGETS in libcurl_vendor (#46 <https://github.com/ros/resource_retriever/issues/46>)
+  * Contributors: Dirk Thomas
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 03 Jun 2020 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.3.1-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 08 May 2020 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.3.0-2noble) noble; urgency=high
+
+  * Ignore broken curl-config.cmake (#40 <https://github.com/ros/resource_retriever/issues/40>)
+  * Update curl reference from 7.57 to 7.58 (#36 <https://github.com/ros/resource_retriever/issues/36>)
+  * Contributors: Nathan Brooks, Scott K Logan
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 30 Apr 2020 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.2.0-2noble) noble; urgency=high
+
+  * add .dsv file beside custom environment hook (#30 <https://github.com/ros/resource_retriever/issues/30>)
+  * Contributors: Dirk Thomas
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 26 Sep 2019 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.1.1-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 08 May 2019 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.1.0-2noble) noble; urgency=high
+
+  * depend on curl (mapping to curl, libcurl4-openssl-dev) for packaging (#25 <https://github.com/ros/resource_retriever/issues/25>)
+  * add missing dependency on pkg-config (#19 <https://github.com/ros/resource_retriever/issues/19>)
+  * [libcurl_vendor] convert to ament and setup env hooks for library paths (#14 <https://github.com/ros/resource_retriever/issues/14>)
+  * Contributors: Dirk Thomas, Mikael Arguedas, William Woodall
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 21 Jun 2018 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (2.0.0-2noble) noble; urgency=high
+
+  * disable docs and tests for libcurl to avoid needing perl
+  * fix libcurl vendor package on Windows and warnings
+  * add temporary libcurl_vendor and use it to get curl
+  * Contributors: William Woodall
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 08 Dec 2017 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (1.12.3-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 27 Mar 2017 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (1.12.2-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 10 Jun 2016 14:16:00 -0000
+
+ros-rolling-libcurl-vendor (1.12.1-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 10 Jun 2016 10:28:00 -0000
+
+ros-rolling-libcurl-vendor (1.12.0-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 23 Mar 2016 00:00:00 -0000
+
+ros-rolling-libcurl-vendor (1.11.6-2noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 30 Nov 2014 00:00:00 -0000
+
+

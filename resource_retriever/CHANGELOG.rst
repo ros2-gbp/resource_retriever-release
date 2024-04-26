@@ -2,6 +2,9 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.5.0 (2024-04-26)
+------------------
+
 3.4.1 (2024-04-16)
 ------------------
 * Update resource retreiver to use rule of five (`#95 <https://github.com/ros/resource_retriever/issues/95>`_)

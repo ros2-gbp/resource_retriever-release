@@ -1,3 +1,28 @@
+## resource_retriever (jazzy) - 3.4.2-2
+
+The packages in the `resource_retriever` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release resource_retriever --rosdistro jazzy` on `Mon, 13 May 2024 18:03:52 -0000`
+
+These packages were released:
+- `libcurl_vendor`
+- `resource_retriever`
+
+Version of package(s) in repository `resource_retriever`:
+
+- upstream repository: https://github.com/ros/resource_retriever.git
+- release repository: https://github.com/ros2-gbp/resource_retriever-release.git
+- rosdistro version: `3.4.1-2`
+- old version: `3.4.2-1`
+- new version: `3.4.2-2`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## resource_retriever (jazzy) - 3.4.2-1
 
 The packages in the `resource_retriever` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release resource_retriever --rosdistro jazzy` on `Mon, 13 May 2024 17:59:10 -0000`

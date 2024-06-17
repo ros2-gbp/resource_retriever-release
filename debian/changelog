@@ -1,0 +1,249 @@
+ros-rolling-resource-retriever (3.5.1-1noble) noble; urgency=high
+
+  * Allow spaces (#100 <https://github.com/ros/resource_retriever/issues/100>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 16 Jun 2024 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.5.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 25 Apr 2024 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.4.1-1noble) noble; urgency=high
+
+  * Update resource retreiver to use rule of five (#95 <https://github.com/ros/resource_retriever/issues/95>)
+  * Use default ament_lint_auto (#92 <https://github.com/ros/resource_retriever/issues/92>)
+  * Contributors: Chris Lalancette, Michael Carroll
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 15 Apr 2024 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.4.0-1noble) noble; urgency=high
+
+  * Switch to target_link_libraries. (#89 <https://github.com/ros/resource_retriever/issues/89>)
+  * Update to C++17 (#88 <https://github.com/ros/resource_retriever/issues/88>)
+  * Contributors: Chris Lalancette
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 25 Dec 2023 23:00:00 -0000
+
+ros-rolling-resource-retriever (3.3.1-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 10 Jul 2023 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.3.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 27 Apr 2023 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.2.2-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 01 Nov 2022 23:00:00 -0000
+
+ros-rolling-resource-retriever (3.2.1-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 12 Sep 2022 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.2.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 09 May 2022 22:00:00 -0000
+
+ros-rolling-resource-retriever (3.1.0-1noble) noble; urgency=high
+
+  * Install headers to include/${PROJECT_NAME} (#72 <https://github.com/ros/resource_retriever/issues/72>)
+  * Contributors: Shane Loretz
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 28 Feb 2022 23:00:00 -0000
+
+ros-rolling-resource-retriever (3.0.0-1noble) noble; urgency=high
+
+  * Fix include order for cpplint (#69 <https://github.com/ros/resource_retriever/issues/69>)
+  * Update maintainers (#66 <https://github.com/ros/resource_retriever/issues/66>)
+  * Remove the deprecated retriever.h header (#63 <https://github.com/ros/resource_retriever/issues/63>)
+  * Contributors: Audrow Nash, Chris Lalancette, Jacob Perron
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 13 Jan 2022 23:00:00 -0000
+
+ros-rolling-resource-retriever (2.5.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 05 Apr 2021 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.4.2-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 17 Mar 2021 23:00:00 -0000
+
+ros-rolling-resource-retriever (2.4.1-1noble) noble; urgency=high
+
+  * Throw exception if package name is empty (#54 <https://github.com/ros/resource_retriever/issues/54>)
+  * Update maintainers (#53 <https://github.com/ros/resource_retriever/issues/53>)
+  * Contributors: Alejandro Hernández Cordero, Jacob Perron
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 07 Dec 2020 23:00:00 -0000
+
+ros-rolling-resource-retriever (2.4.0-1noble) noble; urgency=high
+
+  * Add .hpp header and deprecate .h (#51 <https://github.com/ros/resource_retriever/issues/51>)
+  * Add pytest.ini so local tests don't display warning (#48 <https://github.com/ros/resource_retriever/issues/48>)
+  * Contributors: Chris Lalancette, Shane Loretz
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 11 Aug 2020 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.3.2-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 02 Jun 2020 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.3.1-1noble) noble; urgency=high
+
+  * Import pytest before resource_retriever (#45 <https://github.com/ros/resource_retriever/issues/45>)
+  * Use pytest instead of nose (#44 <https://github.com/ros/resource_retriever/issues/44>)
+  * Contributors: Shane Loretz
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 07 May 2020 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.3.0-1noble) noble; urgency=high
+
+  * Towards Quality Level 1 - Added common_linters and fixed tests  (#43 <https://github.com/ros/resource_retriever/issues/43>)
+  * use ament_export_targets() (#41 <https://github.com/ros/resource_retriever/issues/41>)
+  * Catch ament_index_cpp::PackageNotFoundError (#32 <https://github.com/ros/resource_retriever/issues/32>)
+  * Contributors: Alejandro Hernández Cordero, Dirk Thomas, Shane Loretz
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 29 Apr 2020 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.2.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 25 Sep 2019 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.1.1-1noble) noble; urgency=high
+
+  * Changed to export resource retriever and to enable hooks. (#26 <https://github.com/ros/resource_retriever/issues/26>)
+  * Contributors: Steven! Ragnarök
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 07 May 2019 22:00:00 -0000
+
+ros-rolling-resource-retriever (2.1.0-1noble) noble; urgency=high
+
+  * Make sure to export the include directory for resource_retriever. (#22 <https://github.com/ros/resource_retriever/issues/22>)
+  * Contributors: Chris Lalancette
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 20 Jun 2018 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.12.3-1noble) noble; urgency=high
+
+  * Fix C++11 to use set_directory_properties
+  * Make Shane and Chris the maintainers.
+  * Python3 compatibility (#10 <https://github.com/ros/resource_retriever/issues/10>)
+    * Replace urlgrabber with urllib[2]
+    As urlgrabber is not supported for Python 3 replace it with either the built-in urllib (Python 2) or urllib2 (Python 3)
+    * Use rospkg instead of system call for rospack
+    * Add test for python functionality
+    * Fix rospkg dependency definition
+  * Update URL in http test to something which exists (#8 <https://github.com/ros/resource_retriever/issues/8>)
+    * Update URL in http test to something which exists
+  * Contributors: Chris Lalancette, Mike Purvis, Ruben Smits
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 26 Mar 2017 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.12.2-1noble) noble; urgency=high
+
+  * fix failing build due to cmake error (#6 <https://github.com/ros/resource_retriever/issues/6>)
+  * Contributors: Jackie Kay
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 09 Jun 2016 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.12.1-1noble) noble; urgency=high
+
+  * Fix warnings in test (#5 <https://github.com/ros/resource_retriever/issues/5>)
+    add spaces around ROS_PACKAGE_NAME
+  * Merge pull request #4 <https://github.com/ros/resource_retriever/issues/4> from DLu/kinetic-devel
+    Add c++11 flag
+  * Contributors: David V. Lu!!, Jackie Kay, Steven Peters
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 09 Jun 2016 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.12.0-1noble) noble; urgency=high
+
+  * resource_retriever: adding missing dep
+    Using the python resource_retriever requires the python-urlgrabber system dependency: http://rosindex.github.io/d/python-urlgrabber/
+  * Contributors: Jonathan Bohren
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 22 Mar 2016 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.6-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sat, 29 Nov 2014 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.5-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 23 Jul 2014 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.4-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 06 Jul 2014 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.3-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 23 Jun 2014 22:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.2-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 21 Mar 2014 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.1-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 19 Mar 2014 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.11.0-1noble) noble; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 20 Feb 2014 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.10.18-1noble) noble; urgency=high
+
+  * add DEPENDS for kdl_parser
+  * Contributors: Ioan Sucan
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 03 Dec 2013 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.10.16-1noble) noble; urgency=high
+
+  * check for CATKIN_ENABLE_TESTING
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 17 Nov 2013 23:00:00 -0000
+
+ros-rolling-resource-retriever (1.10.15-1noble) noble; urgency=high
+
+  * resource_retriever: install python package using setup.py
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Fri, 16 Aug 2013 22:00:00 -0000
+
+

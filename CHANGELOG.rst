@@ -2,6 +2,11 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.4.3 (2024-06-27)
+------------------
+* Allow spaces (`#100 <https://github.com/ros/resource_retriever/issues/100>`_) (`#101 <https://github.com/ros/resource_retriever/issues/101>`_)
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+
 3.4.2 (2024-05-13)
 ------------------
 

@@ -36,7 +36,7 @@
 
 #include "resource_retriever/visibility_control.hpp"
 
-using CURL = void;
+typedef void CURL;
 
 namespace resource_retriever
 {
@@ -54,8 +54,13 @@ public:
  */
 struct MemoryResource
 {
+  MemoryResource()
+  : size(0)
+  {
+  }
+
   std::shared_ptr<uint8_t> data;
-  size_t size {0};
+  size_t size;
 };
 
 /**
@@ -69,12 +74,6 @@ public:
 
   ~Retriever();
 
-  Retriever(const Retriever & ret) = delete;
-  Retriever & operator=(const Retriever & other) = delete;
-
-  Retriever(Retriever && other) noexcept;
-  Retriever & operator=(Retriever && other) noexcept;
-
   /**
    * \brief Get a file and store it in memory
    * \param url The url to retrieve.  package://package/file will be turned into the correct file:// invocation
@@ -84,7 +83,9 @@ public:
   MemoryResource get(const std::string & url);
 
 private:
-  CURL * curl_handle_ {nullptr};
+  Retriever(const Retriever & ret) = delete;
+
+  CURL * curl_handle_;
 };
 
 }  //  namespace resource_retriever

@@ -2,7 +2,35 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.2.3 (2024-07-10)
+3.6.0 (2024-11-20)
+------------------
+* Stop using python_cmake_module. (`#94 <https://github.com/ros/resource_retriever/issues/94>`_)
+* Contributors: Chris Lalancette
+
+3.5.1 (2024-06-17)
+------------------
+* Allow spaces (`#100 <https://github.com/ros/resource_retriever/issues/100>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.5.0 (2024-04-26)
+------------------
+
+3.4.1 (2024-04-16)
+------------------
+* Update resource retreiver to use rule of five (`#95 <https://github.com/ros/resource_retriever/issues/95>`_)
+* Use default ament_lint_auto (`#92 <https://github.com/ros/resource_retriever/issues/92>`_)
+* Contributors: Chris Lalancette, Michael Carroll
+
+3.4.0 (2023-12-26)
+------------------
+* Switch to target_link_libraries. (`#89 <https://github.com/ros/resource_retriever/issues/89>`_)
+* Update to C++17 (`#88 <https://github.com/ros/resource_retriever/issues/88>`_)
+* Contributors: Chris Lalancette
+
+3.3.1 (2023-07-11)
+------------------
+
+3.3.0 (2023-04-28)
 ------------------
 
 3.2.2 (2022-11-02)

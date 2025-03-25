@@ -2,58 +2,20 @@
 Changelog for package libcurl_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.6.0 (2024-11-20)
+3.1.3 (2025-03-25)
 ------------------
+* uniform  MinCMakeVersion (backport `#108 <https://github.com/ros/resource_retriever/issues/108>`_) (`#110 <https://github.com/ros/resource_retriever/issues/110>`_)
+* Contributors: mergify[bot]
 
-3.5.1 (2024-06-17)
+3.1.2 (2024-05-15)
 ------------------
-* Add "lib" to the Windows curl search path. (`#96 <https://github.com/ros/resource_retriever/issues/96>`_)
-  In CMake 3.3, a commit made it so that the find_package
-  module in CMake had a compatibility mode where it would
-  automatically search for packages in a <prefix>/lib subdirectory.
-  In CMake 3.6, this compatibility mode was reverted for all
-  platforms *except* Windows.
-  That means that since CMake 3.3, we haven't actually been
-  using the path as specified in `curl_DIR`, but we have
-  instead been inadvertently relying on that fallback behavior.
-  In CMake 3.28, that compatibilty mode was also removed for
-  Windows, meaning that we are now failing to find_package(curl)
-  in downstream packages (like resource_retriever).
-  Fix this by adding in the "lib" directory that always should
-  have been there.  I'll note that this *only* affects our
-  Windows builds, because this code is in a if(WIN32) block.
-* Contributors: Chris Lalancette
+* Add "lib" to the Windows curl search path. (`#96 <https://github.com/ros/resource_retriever/issues/96>`_) (`#99 <https://github.com/ros/resource_retriever/issues/99>`_)
+* Contributors: mergify[bot]
 
-3.5.0 (2024-04-26)
+3.1.1 (2023-01-10)
 ------------------
-
-3.4.1 (2024-04-16)
-------------------
-
-3.4.0 (2023-12-26)
-------------------
-
-3.3.1 (2023-07-11)
-------------------
-* Switch to ament_cmake_vendor_package (`#86 <https://github.com/ros/resource_retriever/issues/86>`_)
-* Contributors: Scott K Logan
-
-3.3.0 (2023-04-28)
-------------------
-
-3.2.2 (2022-11-02)
-------------------
-* merge libcurl_vendor build instructions (`#81 <https://github.com/ros/resource_retriever/issues/81>`_)
-* Contributors: schrodinbug
-
-3.2.1 (2022-09-13)
-------------------
-* Sets CMP0135 policy behavior to NEW (`#79 <https://github.com/ros/resource_retriever/issues/79>`_)
-* Fixes policy CMP0135 warning for CMake >= 3.24
-* Contributors: Cristóbal Arroyo, Crola1702
-
-3.2.0 (2022-05-10)
-------------------
+* Sets CMP0135 policy behavior to NEW (backport `#79 <https://github.com/ros/resource_retriever/issues/79>`_) (`#82 <https://github.com/ros/resource_retriever/issues/82>`_)
+* Contributors: mergify[bot]
 
 3.1.0 (2022-03-01)
 ------------------

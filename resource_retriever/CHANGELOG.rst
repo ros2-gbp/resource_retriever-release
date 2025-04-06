@@ -2,15 +2,47 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.1.3 (2025-03-25)
+3.4.4 (2025-04-02)
 ------------------
-* uniform  MinCMakeVersion (backport `#108 <https://github.com/ros/resource_retriever/issues/108>`_) (`#110 <https://github.com/ros/resource_retriever/issues/110>`_)
+* uniform  MinCMakeVersion (`#108 <https://github.com/ros/resource_retriever/issues/108>`_) (`#109 <https://github.com/ros/resource_retriever/issues/109>`_)
+  Co-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>
+  (cherry picked from commit 168300fba1c4f507d1e3bea0c4f97d468cbad477)
+  Co-authored-by: mosfet80 <realeandrea@yahoo.it>
 * Contributors: mergify[bot]
 
-3.1.2 (2024-05-15)
+3.4.3 (2024-06-27)
+------------------
+* Allow spaces (`#100 <https://github.com/ros/resource_retriever/issues/100>`_) (`#101 <https://github.com/ros/resource_retriever/issues/101>`_)
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+
+3.4.2 (2024-05-13)
 ------------------
 
-3.1.1 (2023-01-10)
+3.4.1 (2024-04-16)
+------------------
+* Update resource retreiver to use rule of five (`#95 <https://github.com/ros/resource_retriever/issues/95>`_)
+* Use default ament_lint_auto (`#92 <https://github.com/ros/resource_retriever/issues/92>`_)
+* Contributors: Chris Lalancette, Michael Carroll
+
+3.4.0 (2023-12-26)
+------------------
+* Switch to target_link_libraries. (`#89 <https://github.com/ros/resource_retriever/issues/89>`_)
+* Update to C++17 (`#88 <https://github.com/ros/resource_retriever/issues/88>`_)
+* Contributors: Chris Lalancette
+
+3.3.1 (2023-07-11)
+------------------
+
+3.3.0 (2023-04-28)
+------------------
+
+3.2.2 (2022-11-02)
+------------------
+
+3.2.1 (2022-09-13)
+------------------
+
+3.2.0 (2022-05-10)
 ------------------
 
 3.1.0 (2022-03-01)

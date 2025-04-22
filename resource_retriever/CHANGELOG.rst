@@ -2,20 +2,25 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.4.4 (2025-04-02)
+3.7.0 (2025-04-22)
 ------------------
-* uniform  MinCMakeVersion (`#108 <https://github.com/ros/resource_retriever/issues/108>`_) (`#109 <https://github.com/ros/resource_retriever/issues/109>`_)
-  Co-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>
-  (cherry picked from commit 168300fba1c4f507d1e3bea0c4f97d468cbad477)
-  Co-authored-by: mosfet80 <realeandrea@yahoo.it>
-* Contributors: mergify[bot]
+* Fixed clang compile error (`#112 <https://github.com/ros/resource_retriever/issues/112>`_)
+* Removed windows warnings (`#111 <https://github.com/ros/resource_retriever/issues/111>`_)
+* Add a plugin mechanism to resource_retriever (`#103 <https://github.com/ros/resource_retriever/issues/103>`_)
+* uniform  MinCMakeVersion (`#108 <https://github.com/ros/resource_retriever/issues/108>`_)
+* Contributors: Alejandro Hernández Cordero, Michael Carroll, mosfet80
 
-3.4.3 (2024-06-27)
+3.6.0 (2024-11-20)
 ------------------
-* Allow spaces (`#100 <https://github.com/ros/resource_retriever/issues/100>`_) (`#101 <https://github.com/ros/resource_retriever/issues/101>`_)
-  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+* Stop using python_cmake_module. (`#94 <https://github.com/ros/resource_retriever/issues/94>`_)
+* Contributors: Chris Lalancette
 
-3.4.2 (2024-05-13)
+3.5.1 (2024-06-17)
+------------------
+* Allow spaces (`#100 <https://github.com/ros/resource_retriever/issues/100>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.5.0 (2024-04-26)
 ------------------
 
 3.4.1 (2024-04-16)

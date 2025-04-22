@@ -2,20 +2,17 @@
 Changelog for package libcurl_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.4.4 (2025-04-02)
+3.7.0 (2025-04-22)
 ------------------
-* uniform  MinCMakeVersion (`#108 <https://github.com/ros/resource_retriever/issues/108>`_) (`#109 <https://github.com/ros/resource_retriever/issues/109>`_)
-  Co-authored-by: Alejandro Hernandez Cordero <ahcorde@gmail.com>
-  (cherry picked from commit 168300fba1c4f507d1e3bea0c4f97d468cbad477)
-  Co-authored-by: mosfet80 <realeandrea@yahoo.it>
-* Contributors: mergify[bot]
+* uniform  MinCMakeVersion (`#108 <https://github.com/ros/resource_retriever/issues/108>`_)
+* Contributors: mosfet80
 
-3.4.3 (2024-06-27)
+3.6.0 (2024-11-20)
 ------------------
 
-3.4.2 (2024-05-13)
+3.5.1 (2024-06-17)
 ------------------
-* Add "lib" to the Windows curl search path. (`#96 <https://github.com/ros/resource_retriever/issues/96>`_) (`#97 <https://github.com/ros/resource_retriever/issues/97>`_)
+* Add "lib" to the Windows curl search path. (`#96 <https://github.com/ros/resource_retriever/issues/96>`_)
   In CMake 3.3, a commit made it so that the find_package
   module in CMake had a compatibility mode where it would
   automatically search for packages in a <prefix>/lib subdirectory.
@@ -30,9 +27,10 @@ Changelog for package libcurl_vendor
   Fix this by adding in the "lib" directory that always should
   have been there.  I'll note that this *only* affects our
   Windows builds, because this code is in a if(WIN32) block.
-  (cherry picked from commit 1839d583190eb9dcf339eaaf6bebe632d94664a6)
-  Co-authored-by: Chris Lalancette <clalancette@gmail.com>
-* Contributors: mergify[bot]
+* Contributors: Chris Lalancette
+
+3.5.0 (2024-04-26)
+------------------
 
 3.4.1 (2024-04-16)
 ------------------

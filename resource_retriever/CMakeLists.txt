@@ -17,8 +17,12 @@ find_package(libcurl_vendor REQUIRED)
 find_package(CURL REQUIRED)
 
 # TODO(wjwwood): split cpp and python apis into separate packages
-
-add_library(${PROJECT_NAME} src/retriever.cpp)
+add_library(${PROJECT_NAME}
+  src/retriever.cpp
+  src/plugins/retriever_plugin.cpp
+  src/plugins/filesystem_retriever.cpp
+  src/plugins/curl_retriever.cpp
+)
 target_include_directories(${PROJECT_NAME}
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -51,24 +55,11 @@ if(BUILD_TESTING)
   ament_add_gtest(${PROJECT_NAME}_test test/test.cpp)
   target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME})
 
-  # Python test
-  # Provides PYTHON_EXECUTABLE_DEBUG
-  find_package(python_cmake_module REQUIRED)
-  find_package(PythonExtra REQUIRED)
-
-  set(_PYTHON_EXECUTABLE "${PYTHON_EXECUTABLE}")
-  if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Debug")
-    set(PYTHON_EXECUTABLE "${PYTHON_EXECUTABLE_DEBUG}")
-  endif()
-
   find_package(ament_cmake_pytest REQUIRED)
   ament_add_pytest_test(resource_retriever_python_test test/test.py
-    PYTHON_EXECUTABLE "${PYTHON_EXECUTABLE}"
     APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}
     TIMEOUT 60
   )
-
-  set(PYTHON_EXECUTABLE "${_PYTHON_EXECUTABLE}")
 
   install(
     FILES test/test.txt

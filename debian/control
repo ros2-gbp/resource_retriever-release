@@ -1,0 +1,12 @@
+Source: ros-rolling-libcurl-vendor
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), curl, file, libcurl4-openssl-dev, ros-rolling-ament-cmake, ros-rolling-ament-cmake-vendor-package, ros-rolling-ros-workspace
+Homepage: https://github.com/curl/curl
+Standards-Version: 3.9.2
+
+Package: ros-rolling-libcurl-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, curl, libcurl4-openssl-dev, pkg-config, ros-rolling-ros-workspace
+Description: Wrapper around libcurl, it provides a fixed CMake module and an ExternalProject build of it.

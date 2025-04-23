@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.5)
 project(resource_retriever)
 
 # Default to C++17
@@ -17,12 +17,8 @@ find_package(libcurl_vendor REQUIRED)
 find_package(CURL REQUIRED)
 
 # TODO(wjwwood): split cpp and python apis into separate packages
-add_library(${PROJECT_NAME}
-  src/retriever.cpp
-  src/plugins/retriever_plugin.cpp
-  src/plugins/filesystem_retriever.cpp
-  src/plugins/curl_retriever.cpp
-)
+
+add_library(${PROJECT_NAME} src/retriever.cpp)
 target_include_directories(${PROJECT_NAME}
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

@@ -31,69 +31,60 @@
 
 #include <cstdint>
 #include <memory>
+#include <stdexcept>
 #include <string>
-#include <vector>
 
-#include "resource_retriever/exception.hpp"
-#include "resource_retriever/memory_resource.hpp"
-#include "resource_retriever/plugins/retriever_plugin.hpp"
-#include "resource_retriever/resource.hpp"
 #include "resource_retriever/visibility_control.hpp"
+
+using CURL = void;
 
 namespace resource_retriever
 {
-
-using RetrieverPluginSharedPtr = std::shared_ptr<plugins::RetrieverPlugin>;
-using RetrieverVec = std::vector<RetrieverPluginSharedPtr>;
-
-RetrieverVec RESOURCE_RETRIEVER_PUBLIC default_plugins();
-
-/**
- * \brief Retrieves files from from a url. Caches a CURL handle so multiple accesses to a single url
- * will keep connections open.
- */
-class Retriever
+class Exception : public std::runtime_error
 {
 public:
-  RESOURCE_RETRIEVER_PUBLIC
-  explicit Retriever(RetrieverVec plugins = default_plugins());
-
-  RESOURCE_RETRIEVER_PUBLIC
-  ~Retriever();
-
-#ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable : 4996)
-#else
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-#endif
-  /**
-   * \brief Get a file and store it in memory
-   * \param url The url to retrieve. package://package/file will be turned into the correct file:// invocation
-   * \return The file, loaded into memory
-   * \throws resource_retriever::Exception if anything goes wrong.
-   */
-  [[deprecated("Use get_shared(const std::string & url) instead.")]]
-  RESOURCE_RETRIEVER_PUBLIC
-  MemoryResource get(const std::string & url);
-#ifdef _MSC_VER
-#pragma warning(pop)
-#else
-#pragma GCC diagnostic pop
-#endif
+  Exception(const std::string & file, const std::string & error_msg)
+  : std::runtime_error("Error retrieving file [" + file + "]: " + error_msg)
+  {
+  }
+};
 
 /**
+ * \brief A combination of a pointer to data in memory along with the data's size.
+ */
+struct MemoryResource
+{
+  std::shared_ptr<uint8_t> data;
+  size_t size {0};
+};
+
+/**
+ * \brief Retrieves files from from a url.  Caches a CURL handle so multiple accesses to a single url
+ * will keep connections open.
+ */
+class RESOURCE_RETRIEVER_PUBLIC Retriever
+{
+public:
+  Retriever();
+
+  ~Retriever();
+
+  Retriever(const Retriever & ret) = delete;
+  Retriever & operator=(const Retriever & other) = delete;
+
+  Retriever(Retriever && other) noexcept;
+  Retriever & operator=(Retriever && other) noexcept;
+
+  /**
    * \brief Get a file and store it in memory
-   * \param url The url to retrieve. package://package/file will be turned into the correct file:// invocation
+   * \param url The url to retrieve.  package://package/file will be turned into the correct file:// invocation
    * \return The file, loaded into memory
    * \throws resource_retriever::Exception if anything goes wrong.
    */
-  RESOURCE_RETRIEVER_PUBLIC
-  ResourceSharedPtr get_shared(const std::string & url);
+  MemoryResource get(const std::string & url);
 
 private:
-  RetrieverVec plugins;
+  CURL * curl_handle_ {nullptr};
 };
 
 }  //  namespace resource_retriever

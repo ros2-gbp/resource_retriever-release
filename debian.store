@@ -1,1 +1,1 @@
-{"base": "70b0960", "parent": "debian/rolling/libcurl_vendor", "previous": "6e777b5", "trim": "", "trimbase": ""}
+{"base": "37b8dbb674cf", "parent": "debian/kilted/libcurl_vendor", "previous": "e65a12093486", "trim": "", "trimbase": ""}

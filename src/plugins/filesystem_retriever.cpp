@@ -26,77 +26,56 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include "resource_retriever/retriever.hpp"
-
-#include <cstring>
-#include <memory>
-#include <string>
-#include <utility>
-
-#include "resource_retriever/exception.hpp"
-#include "resource_retriever/plugins/curl_retriever.hpp"
 #include "resource_retriever/plugins/filesystem_retriever.hpp"
 
+#include <fstream>
+#include <ios>
+#include <memory>
+#include <string>
+#include <vector>
 
-namespace resource_retriever
+#include "resource_retriever/exception.hpp"
+
+namespace resource_retriever::plugins
 {
 
-RetrieverVec default_plugins()
+FilesystemRetriever::FilesystemRetriever() = default;
+
+FilesystemRetriever::~FilesystemRetriever() = default;
+
+std::string FilesystemRetriever::name()
 {
-  return {
-    std::make_shared<plugins::FilesystemRetriever>(),
-    std::make_shared<plugins::CurlRetriever>(),
-  };
+  return "resource_retriever::plugins::FilesystemRetriever";
 }
 
-Retriever::Retriever(RetrieverVec plugins)
-:plugins(std::move(plugins))
+bool FilesystemRetriever::can_handle(const std::string & url)
 {
+  return url.find("package://") == 0 || url.find("file://") == 0;
 }
 
-Retriever::~Retriever() = default;
-
-#ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable : 4996)
-#else
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-#endif
-
-MemoryResource Retriever::get(const std::string & url)
+ResourceSharedPtr FilesystemRetriever::get_shared(const std::string & url)
 {
-  auto resource_shared_ptr = get_shared(url);
-  MemoryResource memory_resource;
-  if (!resource_shared_ptr) {
-    // resource not found, return empty MemoryResource
-    return memory_resource;
+  // Expand package:// url into file://
+  auto mod_url = url;
+  mod_url = expand_package_url(mod_url);
+
+  if (mod_url.find("file://") == 0) {
+    mod_url = mod_url.substr(7);
   }
-  memory_resource.size = resource_shared_ptr->data.size();
-  // Converted from boost::shared_array, see: https://stackoverflow.com/a/8624884
-  memory_resource.data.reset(new uint8_t[memory_resource.size], std::default_delete<uint8_t[]>());
-  memcpy(memory_resource.data.get(), &resource_shared_ptr->data[0], memory_resource.size);
-  return memory_resource;
-}
 
-#ifdef _MSC_VER
-#pragma warning(pop)
-#else
-#pragma GCC diagnostic pop
-#endif
+  std::ifstream file(mod_url, std::ios::binary);
+  ResourceSharedPtr res {nullptr};
 
-ResourceSharedPtr Retriever::get_shared(const std::string & url)
-{
-  for (auto & plugin : plugins) {
-    if (plugin->can_handle(url)) {
-      auto res = plugin->get_shared(url);
-
-      if (res != nullptr) {
-        return res;
-      }
-    }
+  if (file.is_open()) {
+    // Get the file size
+    std::vector<uint8_t> data(std::istreambuf_iterator<char>(file), {});
+    file.close();
+    res = std::make_shared<Resource>(url, mod_url, data);
+  } else {
+    throw Exception(mod_url, "Failed to open file");
   }
-  return nullptr;
+
+  return res;
 }
 
-}  // namespace resource_retriever
+}  // namespace resource_retriever::plugins

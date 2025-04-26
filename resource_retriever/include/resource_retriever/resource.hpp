@@ -26,77 +26,41 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include "resource_retriever/retriever.hpp"
+#ifndef RESOURCE_RETRIEVER__RESOURCE_HPP_
+#define RESOURCE_RETRIEVER__RESOURCE_HPP_
 
-#include <cstring>
+#include <cstdint>
 #include <memory>
 #include <string>
 #include <utility>
+#include <vector>
 
-#include "resource_retriever/exception.hpp"
-#include "resource_retriever/plugins/curl_retriever.hpp"
-#include "resource_retriever/plugins/filesystem_retriever.hpp"
-
+#include "resource_retriever/visibility_control.hpp"
 
 namespace resource_retriever
 {
-
-RetrieverVec default_plugins()
+/**
+ * \brief A retrieved resource, containing the url, expanded url, and binary data.
+ */
+struct Resource
 {
-  return {
-    std::make_shared<plugins::FilesystemRetriever>(),
-    std::make_shared<plugins::CurlRetriever>(),
-  };
-}
-
-Retriever::Retriever(RetrieverVec plugins)
-:plugins(std::move(plugins))
-{
-}
-
-Retriever::~Retriever() = default;
-
-#ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable : 4996)
-#else
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-#endif
-
-MemoryResource Retriever::get(const std::string & url)
-{
-  auto resource_shared_ptr = get_shared(url);
-  MemoryResource memory_resource;
-  if (!resource_shared_ptr) {
-    // resource not found, return empty MemoryResource
-    return memory_resource;
+  RESOURCE_RETRIEVER_PUBLIC
+  explicit Resource(
+    std::string url_in,
+    std::string expanded_url_in,
+    std::vector<uint8_t> data_in)
+  : url(std::move(url_in)),
+    expanded_url(std::move(expanded_url_in)),
+    data(std::move(data_in))
+  {
   }
-  memory_resource.size = resource_shared_ptr->data.size();
-  // Converted from boost::shared_array, see: https://stackoverflow.com/a/8624884
-  memory_resource.data.reset(new uint8_t[memory_resource.size], std::default_delete<uint8_t[]>());
-  memcpy(memory_resource.data.get(), &resource_shared_ptr->data[0], memory_resource.size);
-  return memory_resource;
-}
+  const std::string url;
+  const std::string expanded_url;
+  const std::vector<uint8_t> data;
+};
 
-#ifdef _MSC_VER
-#pragma warning(pop)
-#else
-#pragma GCC diagnostic pop
-#endif
+using ResourceSharedPtr = std::shared_ptr<Resource>;
 
-ResourceSharedPtr Retriever::get_shared(const std::string & url)
-{
-  for (auto & plugin : plugins) {
-    if (plugin->can_handle(url)) {
-      auto res = plugin->get_shared(url);
+}  //  namespace resource_retriever
 
-      if (res != nullptr) {
-        return res;
-      }
-    }
-  }
-  return nullptr;
-}
-
-}  // namespace resource_retriever
+#endif  // RESOURCE_RETRIEVER__RESOURCE_HPP_

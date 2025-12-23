@@ -28,7 +28,6 @@
 
 #include "resource_retriever/plugins/retriever_plugin.hpp"
 
-#include <filesystem>
 #include <string>
 #include <string_view>
 
@@ -77,14 +76,14 @@ std::string expand_package_url(const std::string & url)
       throw Exception(url, "Package name must not be empty");
     }
     mod_url.erase(0, pos);
-    std::filesystem::path package_path;
+    std::string package_path;
     try {
-      ament_index_cpp::get_package_share_directory(package, package_path);
+      package_path = ament_index_cpp::get_package_share_directory(package);
     } catch (const ament_index_cpp::PackageNotFoundError &) {
       throw Exception(url, "Package [" + package + "] does not exist");
     }
 
-    mod_url = "file://" + package_path.string() + mod_url;
+    mod_url = "file://" + package_path + mod_url;
   }
   return mod_url;
 }

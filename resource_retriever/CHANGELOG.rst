@@ -2,7 +2,30 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.7.1 (2025-12-23)
+3.9.2 (2026-02-25)
+------------------
+* Use get_package_share_path (`#119 <https://github.com/ros/resource_retriever/issues/119>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.9.1 (2025-12-23)
+------------------
+* Updated deprecated ament_index_cpp API (`#118 <https://github.com/ros/resource_retriever/issues/118>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.9.0 (2025-09-10)
+------------------
+* removed libcurl_vendor package (`#116 <https://github.com/ros/resource_retriever/issues/116>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.8.2 (2025-07-01)
+------------------
+
+3.8.1 (2025-05-19)
+------------------
+* Removed deprecated code (`#113 <https://github.com/ros/resource_retriever/issues/113>`_)
+* Contributors: Alejandro Hernández Cordero
+
+3.8.0 (2025-04-25)
 ------------------
 
 3.7.0 (2025-04-22)

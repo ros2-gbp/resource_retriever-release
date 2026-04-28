@@ -303,5 +303,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros/resource_retriever.git
-    version: 3.9.3
-    version_saved: :{auto}
+    version: :{auto}

@@ -1,3 +1,26 @@
+## resource_retriever (rolling) - 3.10.2-1
+
+The packages in the `resource_retriever` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling resource_retriever` on `Thu, 22 Oct 2026 09:37:26 -0000`
+
+The `resource_retriever` package was released.
+
+Version of package(s) in repository `resource_retriever`:
+
+- upstream repository: https://github.com/ros/resource_retriever.git
+- release repository: https://github.com/ros2-gbp/resource_retriever-release.git
+- rosdistro version: `3.10.1-1`
+- old version: `3.10.1-1`
+- new version: `3.10.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## resource_retriever (rolling) - 3.10.1-1
 
 The packages in the `resource_retriever` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling resource_retriever` on `Thu, 09 Jul 2026 11:15:11 -0000`

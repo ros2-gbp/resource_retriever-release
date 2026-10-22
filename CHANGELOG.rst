@@ -2,6 +2,11 @@
 Changelog for package resource_retriever
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.10.2 (2026-10-22)
+-------------------
+* use libcurl as exec_depend and libcurl-dev as build_depend (`#127 <https://github.com/ros/resource_retriever/issues/127>`_)
+* Contributors: Alejandro Hernández Cordero
+
 3.10.1 (2026-07-09)
 -------------------
 * Updated to cpp20 (`#123 <https://github.com/ros/resource_retriever/issues/123>`_)
